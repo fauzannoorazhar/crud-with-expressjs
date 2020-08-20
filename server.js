@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 // define a root route
 app.get('/', (req, res) => {
-  res.send("Hello World");
+  res.send("My First API With ExpressJs");
 });
 // Require employee routes
 const employeeRoutes = require('./src/routes/employee.routes')
@@ -20,3 +20,5 @@ app.use('/api/v1/employees', employeeRoutes)
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
 });
+
+// for run nodemon : nodemon --inspect server.js
